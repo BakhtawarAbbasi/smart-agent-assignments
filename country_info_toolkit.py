@@ -1,7 +1,6 @@
 from agents import Agent, Runner, AsyncOpenAI, OpenAIChatCompletionsModel
 from agents.run import RunConfig
 
-# Setup Gemini API
 gemini_api_key = "AIzaSyDikAKCtOAWIqKRNXXXUgPgrmJKSxrdUjg"
 
 external_client = AsyncOpenAI(
@@ -10,7 +9,7 @@ external_client = AsyncOpenAI(
 )
 
 model = OpenAIChatCompletionsModel(
-    model="gemini-1.5-flash",  # or gemini-2.0 if supported
+    model="gemini-1.5-flash",  
     openai_client=external_client
 )
 
@@ -38,7 +37,7 @@ PopulationAgent = Agent(
     instructions="You are a helpful assistant that tells the population of a country. Only answer with the approximate population."
 )
 
-# ✅ Orchestrator Agent: Uses all 3 tools
+#  Orchestrator Agent: Uses all 3 tools
 OrchestratorAgent = Agent(
     name="CountryInfoOrchestrator",
     instructions="""

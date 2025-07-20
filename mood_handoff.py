@@ -2,11 +2,11 @@ from dotenv import load_dotenv
 import os
 from agents import Agent, Runner
 
-# Load environment variables
+# Load environment 
 load_dotenv()
 api_key = os.getenv("GEMINI_API_KEY")
 
-# Gemini model via litellm
+# Gemini model
 model_name = "litellm/gemini/gemini-2.5-flash"
 
 # Agent 1: Mood Detector

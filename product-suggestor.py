@@ -1,15 +1,14 @@
 from dotenv import load_dotenv
 import os
 from agents import Agent, Runner
-# LiteLLM integration requires extra dependency installed:
-# pip install "openai-agents[litellm]"
+
 
 # Load .env
 load_dotenv()
 api_key = os.getenv("GOOGLE_API_KEY") or os.getenv("GEMINI_API_KEY")
 assert api_key, "Set GOOGLE_API_KEY or GEMINI_API_KEY in .env"
 
-# Use LiteLLM model identifier for Gemini
+# identifier for Gemini
 model_name = "litellm/gemini/gemini-2.5-flash"
 
 product_recommender_agent = Agent(
